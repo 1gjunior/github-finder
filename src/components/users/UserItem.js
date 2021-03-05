@@ -6,7 +6,7 @@ const UserItem = ({ user: { login, avatar_url, html_url } }) => {
     <div className="card text-center">
       <img
         src={avatar_url}
-        alt=""
+        alt="avatar"
         className="round-img"
         style={{ width: '60px' }}
       />
