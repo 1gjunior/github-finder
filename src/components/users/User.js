@@ -52,12 +52,12 @@ const User = ({ match }) => {
             style={{ width: '150px' }}
           />
           <h1>{name}</h1>
-          <p>{location}</p>
+          <p>{login}</p>
+          <strong>{location}</strong>
         </div>
         <div>
           {bio && (
             <Fragment>
-              <h3>Bio</h3>
               <p>{bio}</p>
             </Fragment>
           )}
@@ -70,14 +70,6 @@ const User = ({ match }) => {
             Visit Github Profile
           </a>
           <ul>
-            <li>
-              {login && (
-                <Fragment>
-                  <strong>Username </strong> {login}
-                </Fragment>
-              )}
-            </li>
-
             <li>
               {company && (
                 <Fragment>
@@ -97,10 +89,10 @@ const User = ({ match }) => {
         </div>
       </div>
       <div className="card text-center">
-        <div className="badge badge-primary">Followers {followers}</div>
-        <div className="badge badge-success">Following {following}</div>
-        <div className="badge badge-light">Public Repos {public_repos}</div>
-        <div className="badge badge-dark">Public Gists {public_gists}</div>
+        <div className="badge badge-primary">{followers} Followers</div>
+        <div className="badge badge-success">{following} Following</div>
+        <div className="badge badge-light">{public_repos} Public Repos</div>
+        <div className="badge badge-dark">{public_gists} Public Gists</div>
       </div>
       <Repos repos={repos} />
     </Fragment>
